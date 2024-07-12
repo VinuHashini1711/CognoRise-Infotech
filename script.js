@@ -1,30 +1,37 @@
-const display = document.querySelector("#display");
-const buttons = document.querySelectorAll("button");
+let button = document.getElementById('btn');
 
-buttons.forEach((item) => {
-  item.onclick = () => {
-    if (item.id == "clear") {
-      display.innerText = "";
-    } else if (item.id == "backspace") {
-      let string = display.innerText.toString();
-      display.innerText = string.substr(0, string.length - 1);
-    } else if (display.innerText != "" && item.id == "equal") {
-      display.innerText = eval(display.innerText);
-    } else if (display.innerText == "" && item.id == "equal") {
-      display.innerText = "Empty!";
-      setTimeout(() => (display.innerText = ""), 2000);
-    } else {
-      display.innerText += item.id;
+button.addEventListener('click', () => {
+    const height = parseInt(document.getElementById('height').value);
+    const weight = parseInt(document.getElementById('weight').value);
+    const result = document.getElementById('output');
+    let height_status=false, weight_status=false;
+
+    if(height === '' || isNaN(height) || (height <= 0)){
+        document.getElementById('height_error').innerHTML = 'Please provide a valid height';
+    }else{
+        document.getElementById('height_error').innerHTML = '';
+        height_status=true;
     }
-  };
-});
 
-const themeToggleBtn = document.querySelector(".theme-toggler");
-const calculator = document.querySelector(".calculator");
-const toggleIcon = document.querySelector(".toggler-icon");
-let isDark = true;
-themeToggleBtn.onclick = () => {
-  calculator.classList.toggle("dark");
-  themeToggleBtn.classList.toggle("active");
-  isDark = !isDark;
-};
+    if(weight === '' || isNaN(weight) || (weight <= 0)){
+        document.getElementById('weight_error').innerHTML = 'Please provide a valid weight';
+    }else{
+        document.getElementById('weight_error').innerHTML = '';
+        weight_status=true;
+    }
+
+    if(height_status && weight_status){
+        const bmi = (weight / ((height*height)/10000)).toFixed(2);
+
+        if(bmi < 18.6){
+            result.innerHTML = 'Under weight : ' + bmi;
+        }else if(bmi >= 18.6 && bmi < 24.9){
+            result.innerHTML = 'Normal : ' + bmi;
+        }else{
+            result.innerHTML = 'Over weight : ' + bmi;
+        }
+    }else{
+        alert('The form has errors');
+        result.innerHTML = '';
+    }
+});
