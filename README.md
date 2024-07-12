@@ -1,7 +1,7 @@
 ## Technologies Used
-  HTML
-  CSS
-  JavaScript
+    HTML
+    CSS
+    JavaScript
 
 
 1 BMI CALCULATOR
