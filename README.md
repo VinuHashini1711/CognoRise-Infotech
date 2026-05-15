@@ -1,21 +1,58 @@
-                       CognoRise InfoTech
-## Tasks
-    1 BMI CALCULATOR
-    2 CALCULATOR
-    3 TO DO LIST
-    
-## Technologies Used
-    HTML
-    CSS
-    JavaScript
+# CognoRise InfoTech Internship Projects 🚀
 
-Description:
+This repository contains the projects developed during my internship using HTML, CSS, and JavaScript.
 
-1. BMI CALCULATOR 
-        The BMI Calculator is a web application that allows users to calculate their Body Mass Index (BMI) based on their weight and height. The application provides the BMI value along with the corresponding category (Underweight, Normal weight, Overweight, Obesity).
+## 📌 Projects
 
-2. CALCULATOR
-        This web-based Simple Calculator offers basic arithmetic operations and supports both light and dark themes for enhanced user experience in different environments. It's designed to be intuitive and responsive, ensuring ease of use on various devices.
+### 1. BMI Calculator
+A web application that calculates Body Mass Index (BMI) using height and weight.
 
-3. TO-DO LIST APPLICATION
-         The To-Do List Application is a web-based tool that helps users keep track of their tasks. Users can add, edit, delete, and mark tasks as completed. The application aims to provide an intuitive and efficient way to manage daily activities and improve productivity.
+#### Features
+- Calculates BMI
+- Shows BMI category
+- Simple and responsive design
+
+---
+
+### 2. Calculator
+A simple calculator for basic arithmetic operations.
+
+#### Features
+- Addition
+- Subtraction
+- Multiplication
+- Division
+- Light and Dark Theme
+
+---
+
+### 3. To-Do List Application
+A task management application to organize daily activities.
+
+#### Features
+- Add tasks
+- Delete tasks
+- Mark tasks as completed
+- Filter completed/incomplete tasks
+- Local storage support
+
+---
+
+## 🛠️ Technologies Used
+
+- HTML
+- CSS
+- JavaScript
+
+---
+
+## 📂 Folder Structure
+
+```bash
+HTML-and-CSS-Projects/
+│
+├── BMI_Calculator/
+├── Calculator/
+├── ToDo_List/
+│
+└── README.md
